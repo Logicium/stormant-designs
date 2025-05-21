@@ -3,6 +3,9 @@
 import data from "@/data/data.ts";
 import BlueprintIcon from "@/components/icons/BlueprintIcon.vue";
 import StructureIcon from "@/components/icons/StructureIcon.vue";
+import ServiceCard from "@/components/cards/ServiceCard.vue";
+import SustainableIcon from "@/components/icons/SustainableIcon.vue";
+import ProductIcon from "@/components/icons/ProductIcon.vue";
 </script>
 
 <template>
@@ -11,46 +14,37 @@ import StructureIcon from "@/components/icons/StructureIcon.vue";
     <div class="med">{{data.hero.ctaText.toUpperCase()}}</div>
   </div>
   <div class="servicesGrid">
+
     <div class="item left">
-      <div class="inner">
-        <div class="flex">
-          <div class="title">{{data.services[0].title.toUpperCase()}}</div>
-          <div class="icon"><BlueprintIcon/></div>
-        </div>
-        <div class="small">{{data.services[0].description}}</div>
-      </div>
+      <ServiceCard :title="data.services[0].title.toUpperCase()" :description="data.services[0].description">
+        <BlueprintIcon/>
+      </ServiceCard>
     </div>
+
     <div class="item top">
-      <div class="inner">
-        <div class="flex">
-          <div class="title">{{data.services[1].title.toUpperCase()}}</div>
-          <div class="icon"><StructureIcon/></div>
-        </div>
-        <div class="small">{{data.services[1].description}}</div>
-        <div></div>
-      </div>
+      <ServiceCard :title="data.services[1].title.toUpperCase()" :description="data.services[1].description">
+        <StructureIcon/>
+      </ServiceCard>
     </div>
 
     <div class="bgItem">
       <div class="emptyTop"/>
     </div>
+
     <div class="bgItem">
       <div class="emptyBottom"/>
     </div>
 
     <div class="item bottom">
-      <div class="inner">
-        <div class="">{{data.services[2].title.toUpperCase()}}</div>
-        <div>{{data.services[2].description}}</div>
-        <div></div>
-      </div>
+      <ServiceCard :title="data.services[2].title.toUpperCase()" :description="data.services[2].description">
+        <ProductIcon/>
+      </ServiceCard>
     </div>
+
     <div class="item right">
-      <div class="inner">
-        <div class="">{{data.services[3].title.toUpperCase()}}</div>
-        <div>{{data.services[3].description}}</div>
-        <div></div>
-      </div>
+      <ServiceCard :title="data.services[3].title.toUpperCase()" :description="data.services[3].description">
+        <SustainableIcon/>
+      </ServiceCard>
     </div>
   </div>
 </div>
@@ -88,21 +82,6 @@ import StructureIcon from "@/components/icons/StructureIcon.vue";
 
 .bgItem{
   background-color: white;
-}
-
-.icon{
-  height: 75px;
-  width: 75px;
-}
-
-.inner{
-  border-radius: 45px;
-  height: 100%;
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background-color: #F2EFE7;
 }
 
 .emptyBottom,.emptyTop{

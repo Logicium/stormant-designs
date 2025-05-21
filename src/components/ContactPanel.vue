@@ -24,7 +24,12 @@ import data from "../data/data.ts";
 
           <div>
             <div>OFFICE</div>
-            <div class="small">{{data.company.location}}</div>
+            <div class="small">
+              {{data.company.location.split(',')[0]}}
+            </div>
+            <div class="small">
+              {{data.company.location.split(',')[1]}}
+            </div>
           </div>
         </div>
 
