@@ -2,7 +2,7 @@
   "autoPlay": true,
   "background": {
     "color": {
-      "value": "#ffffff"
+      "value": "transparent"
     },
     "image": "",
     "position": "",
@@ -476,7 +476,7 @@
         "enable": false,
         "frequency": 1
       },
-      "width": 1,
+      "width": 2,
       "warp": false
     },
     "repulse": {

@@ -23,7 +23,8 @@ nav{
   justify-content: space-between;
   align-items: center;
   z-index: 10;
-  width: calc(100% - 4rem);
+  width: 100%;
+  padding: 2rem;
 }
 .med{
   font-size: 2rem;
