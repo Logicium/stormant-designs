@@ -1,5 +1,6 @@
 <script setup lang="ts">
 
+import data from "../data/data.ts";
 </script>
 
 <template>
@@ -8,7 +9,7 @@
     <div class="footerTop">
       <div>
         <div class="visit">Visit Us</div>
-        <div class="address">256 1st Street, Trinidad CO 81082</div>
+        <div class="address">{{data.company.location}}</div>
       </div>
       <div class="appLetter">S</div>
     </div>

@@ -3,6 +3,7 @@ import { loadFull } from "tsparticles";
 import { ref } from 'vue';
 import configs from "@tsparticles/configs";
 import options from "../config/particlesjs-config.json"
+const props = defineProps(['id'])
 
 // Create a reference to the particles container
 const particlesContainer = ref(null);
@@ -18,14 +19,15 @@ const particlesInit = async (container: any) => {
 
 <template>
   <div class="particle-card">
-    <vue-particles
-      id="tsparticles"
-      @particles-loaded="particlesInit"
-      :options="particlesOptions"
-    />
     <div class="content">
       <slot></slot>
     </div>
+    <vue-particles
+      class="tsparticles"
+      :id="`tsparticles-${id}`"
+      @particles-loaded="particlesInit"
+      :options="particlesOptions"
+    />
   </div>
 </template>
 
@@ -37,7 +39,7 @@ const particlesInit = async (container: any) => {
   overflow: hidden;
 }
 
-#tsparticles {
+.tsparticles {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -46,7 +48,8 @@ const particlesInit = async (container: any) => {
 }
 
 .content {
-  position: relative;
+  position: absolute;
+  padding: 2rem;
   z-index: 2;
   width: 100%;
   height: 100%;

@@ -36,7 +36,7 @@ const showValuesClick = function (){
       <div class="heroText">
         <div class="med half">{{data.company.subTagline}}</div>
       </div>
-      <ParticleCard/>
+      <ParticleCard id="1"/>
     </div>
     <div class="infoWrap">
       <div class="infoSection">

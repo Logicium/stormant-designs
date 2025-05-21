@@ -23,8 +23,8 @@ export const siteData = {
     tagline: "Innovative Engineering Design Solutions",
     subTagline: "Expert engineering design to bring your vision to reality",
     foundedYear: 2024,
-    location: "256 Engineering Avenue, Trinidad CO 80202",
-    email: "info@stormantdesigns.com",
+    location: "612 Park Avenue, Trinidad CO 81082",
+    email: "zach@stormantdesigns.com",
     phone: "+1 (303) 555-1234"
   },
   
