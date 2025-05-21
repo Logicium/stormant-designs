@@ -23,7 +23,7 @@ export const siteData = {
     tagline: "Innovative Engineering Design Solutions",
     subTagline: "Expert engineering design to bring your vision to reality",
     foundedYear: 2024,
-    location: "256 Engineering Avenue, Denver CO 80202",
+    location: "256 Engineering Avenue, Trinidad CO 80202",
     email: "info@stormantdesigns.com",
     phone: "+1 (303) 555-1234"
   },
@@ -37,7 +37,7 @@ export const siteData = {
   
   about: {
     title: "01 ABOUT",
-    content: "Stormant Designs is a specialized engineering design firm based in Denver, Colorado. Established in 2024, we combine technical expertise with innovative thinking to deliver exceptional engineering solutions."
+    content: "Stormant Designs is a specialized engineering design firm based in Trinidad, Colorado. Established in 2024, we combine technical expertise with innovative thinking to deliver exceptional engineering solutions."
   },
   
   mission: {

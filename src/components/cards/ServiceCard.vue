@@ -3,9 +3,7 @@
 </script>
 
 <template>
-  <div class="panel">
 
-  </div>
 </template>
 
 <style scoped lang="scss">

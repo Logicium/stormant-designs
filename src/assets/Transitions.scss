@@ -1,0 +1,23 @@
+// Vue transition for growing elements from 0 to auto height
+.grow-enter-active,
+.grow-leave-active {
+  transition: all 0.5s ease-out;
+  overflow: hidden;
+  interpolate-size: allow-keywords;
+}
+
+.grow-enter-from,
+.grow-leave-to {
+  height: 0;
+  opacity: 0;
+  transform: translateY(-10px);
+  interpolate-size: allow-keywords;
+}
+
+.grow-enter-to,
+.grow-leave-from {
+  height: auto; // A value large enough to accommodate most content
+  opacity: 1;
+  transform: translateY(0);
+  interpolate-size: allow-keywords;
+}

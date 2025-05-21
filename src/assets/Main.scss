@@ -1,4 +1,6 @@
 @import './base.css';
+@import "./Buttons";
+@import "./Transitions";
 
 #app {
   max-width: 1280px;
@@ -14,4 +16,19 @@
 
 .med{
   font-size: 2rem;
+}
+
+.small{
+  font-size: 0.8rem;
+}
+
+
+.panel{
+  height: 100vh;
+  display: grid;
+}
+
+
+.half{
+  width: 50%;
 }
