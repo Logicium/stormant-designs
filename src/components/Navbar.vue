@@ -1,7 +1,8 @@
 <script setup lang="ts">
 
-import {nextTick, onMounted, ref} from "vue";
+import {onMounted, ref} from "vue";
 import Logo from "@/assets/Logo.vue";
+import { scrollToRef } from "@/utils/window.utils";
 const changeColor = ref(false);
 
 // Function to handle scroll events
@@ -13,21 +14,6 @@ const handleScroll = () => {
 onMounted(() => {
   window.addEventListener('scroll', handleScroll);
 });
-
-const scrollToRef = (id:string) => {
-  nextTick(() => {
-    console.log(window?.document?.getElementById(id));
-    const element = window?.document?.getElementById(id);
-    if (element) {
-      const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
-      const offset = id === 'home' ? 0 : 100;
-      window.scrollTo({
-        top: elementPosition - offset,
-        behavior: 'smooth'
-      });
-    }
-  });
-};
 
 
 </script>

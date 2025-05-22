@@ -2,9 +2,9 @@
 
 import ParticleCard from "@/components/cards/ParticleCard.vue";
 import data from "../../data/data.ts";
-import PlusIcon from "@/components/icons/PlusIcon.vue";
 import {ref} from "vue";
 import InfoCard from "@/components/cards/InfoCard.vue";
+import { scrollToRef } from "@/utils/window.utils";
 
 const showAbout = ref(true);
 const showMission = ref(false);
@@ -37,7 +37,7 @@ const showValuesClick = function (){
       <div class="heroText">
 
         <div class="med half">{{data.company.subTagline}}</div>
-        <div class="button cta">BOOK A MEETING</div>
+        <div class="button cta" @click="scrollToRef('contact')">LET'S DISCUSS YOUR PROJECT</div>
       </div>
       <ParticleCard id="1"/>
     </div>
