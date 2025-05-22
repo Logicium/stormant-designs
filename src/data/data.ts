@@ -110,6 +110,9 @@ export const siteData = {
   
   cta: {
     title: "Let us engineer your next project",
+    projects: "We have successfully delivered a diverse portfolio of engineering projects for our clients.",
+    scope:"The breadth of our design work is reflected in the vast square footage we've carefully planned.",
+    content: "Reach out today to discuss your project requirements, and let our engineering expertise develop a tailored solution for your success.",
     buttonText: "Contact Us"
   },
   

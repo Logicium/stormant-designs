@@ -1,11 +1,13 @@
 <script setup lang="ts">
 
-import ParticleCard from "@/components/ParticleCard.vue";
-import data from "../data/data.ts";
+import ParticleCard from "@/components/cards/ParticleCard.vue";
+import data from "../../data/data.ts";
+import FacebookIcon from "@/components/icons/FacebookIcon.vue";
+import LinkedinIcon from "@/components/icons/LinkedinIcon.vue";
 </script>
 
 <template>
-  <div class="panel">
+  <div class="panelS">
     <div class="med">GET IN TOUCH</div>
     <div class="contactGrid">
 
@@ -49,7 +51,11 @@ import data from "../data/data.ts";
 
       <div class="cardContainer">
         <ParticleCard id="2">
-          <div>{{data.cta.title}}</div>
+          <div>{{data.cta.content}}</div>
+          <div class="socials">
+            <div class="icon"><LinkedinIcon/></div>
+            <div class="icon"><FacebookIcon/></div>
+          </div>
         </ParticleCard>
       </div>
     </div>
@@ -58,7 +64,7 @@ import data from "../data/data.ts";
 
 <style scoped lang="scss">
 
-.panel{
+.panelS{
   padding: 2rem;
   grid-template-rows: auto 1fr;
 }
@@ -125,6 +131,32 @@ textarea{
 
 input:focus, textarea:focus{
   outline: none;
+}
+
+.icon{
+  background-color: white;
+  color: black;
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 2rem;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.icon:hover{
+  background-color: black;
+  color: white;
+  transition: 0.5s;
+}
+
+.socials{
+  margin-top: auto;
+  display: flex;
+  justify-content: flex-end;
 }
 
 </style>

@@ -1,15 +1,29 @@
 <script setup lang="ts">
 
+import {onMounted, ref} from "vue";
+import Logo from "@/assets/Logo.vue";
+const changeColor = ref(false);
+
+// Function to handle scroll events
+const handleScroll = () => {
+  changeColor.value = window.scrollY > 0;
+};
+
+// Set up scroll event listener when component is mounted
+onMounted(() => {
+  window.addEventListener('scroll', handleScroll);
+});
+
 </script>
 
 <template>
-  <nav>
-    <div class="med">STORMANT DESIGNS</div>
-    <div class="links">
+  <nav :class="{colorChange: changeColor}">
+    <div class="logoWrap"><div class="logo"><Logo/></div>STORMANT DESIGNS</div>
+    <div class="links" :class="{changeBorder:changeColor}">
       <div>HOME</div>
       <div>ABOUT</div>
       <div>SERVICES</div>
-      <div>REVIEWS</div>
+      <div>COMPANY</div>
     </div>
     <div class="button">CONTACT</div>
   </nav>
@@ -22,9 +36,20 @@ nav{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 10;
+  z-index: 11;
   width: 100%;
-  padding: 2rem;
+  padding: 1rem 2rem;
+  transition: 1s;
+  height: 100px;
+  max-height: 100px;
+  color: white;
+}
+
+.colorChange{
+  background-color: white;
+  transition: 1s;
+  color: black;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
 }
 .med{
   font-size: 2rem;
@@ -36,10 +61,16 @@ nav{
   display: flex;
   gap: 2rem;
   height: 45px;
-  border: 2px solid black;
+  border: 2px solid white;
   border-radius:45px;
   padding: 0 2rem;
   align-items: center;
+}
+
+.changeBorder{
+  transition: 1s;
+  color: black;
+  border: 2px solid black;
 }
 
 .button{
@@ -51,6 +82,20 @@ nav{
   border-radius:45px;
   cursor: pointer;
   color: white;
+}
+
+.logo{
+  height: 80px;
+  width: 180px;
+  margin-top: -20px;
+}
+
+.logoWrap{
+  text-align: center;
+}
+
+.med{
+
 }
 
 </style>

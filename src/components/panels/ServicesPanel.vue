@@ -9,7 +9,7 @@ import ProductIcon from "@/components/icons/ProductIcon.vue";
 </script>
 
 <template>
-<div class="panel">
+<div class="panelS">
   <div class="infoSection">
     <div class="med">{{data.hero.ctaText.toUpperCase()}}</div>
   </div>
@@ -53,11 +53,11 @@ import ProductIcon from "@/components/icons/ProductIcon.vue";
 <style scoped lang="scss">
 
 .infoSection{
-  padding: 2rem;
+  padding: 2rem 2rem 0 2rem;
   display: flex;
 }
 
-.panel{
+.panelS{
   background: #F2EFE7;
   grid-template-rows: auto 1fr;
 }

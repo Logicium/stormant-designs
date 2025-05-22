@@ -186,36 +186,7 @@
       }
     },
     "color": {
-      "value": "#ff0000",
-      "animation": {
-        "h": {
-          "count": 0,
-          "enable": true,
-          "speed": 20,
-          "decay": 0,
-          "delay": 0,
-          "sync": true,
-          "offset": 0
-        },
-        "s": {
-          "count": 0,
-          "enable": false,
-          "speed": 1,
-          "decay": 0,
-          "delay": 0,
-          "sync": true,
-          "offset": 0
-        },
-        "l": {
-          "count": 0,
-          "enable": false,
-          "speed": 1,
-          "decay": 0,
-          "delay": 0,
-          "sync": true,
-          "offset": 0
-        }
-      }
+      "value": "#000000"
     },
     "effect": {
       "close": true,
@@ -327,7 +298,11 @@
       "close": true,
       "fill": true,
       "options": {},
-      "type": "circle"
+      "type": "circle",
+      "stroke": {
+        "width": 10,
+        "color": "#000000"
+      }
     },
     "size": {
       "value": {
@@ -461,7 +436,7 @@
         "value": "#000000"
       },
       "consent": false,
-      "distance": 150,
+      "distance": 180,
       "enable": true,
       "frequency": 1,
       "opacity": 0.4,

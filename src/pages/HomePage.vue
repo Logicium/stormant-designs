@@ -1,9 +1,10 @@
 <script setup lang="ts">
 
+import HeroPanel from "@/components/panels/HeroPanel.vue";
+import ServicesPanel from "@/components/panels/ServicesPanel.vue";
+import ContactPanel from "@/components/panels/ContactPanel.vue";
+import CompanyPanel from "@/components/panels/CompanyPanel.vue";
 
-import HeroPanel from "@/components/HeroPanel.vue";
-import ServicesPanel from "@/ServicesPanel.vue";
-import ContactPanel from "@/components/ContactPanel.vue";
 </script>
 
 <template>
@@ -11,6 +12,7 @@ import ContactPanel from "@/components/ContactPanel.vue";
   <div>
     <HeroPanel/>
     <ServicesPanel/>
+    <CompanyPanel/>
     <ContactPanel/>
   </div>
 

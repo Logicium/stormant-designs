@@ -28,6 +28,11 @@
   display: grid;
 }
 
+.panelS{
+  height: calc(100vh - 100px);
+  display: grid;
+}
+
 
 .half{
   width: 50%;

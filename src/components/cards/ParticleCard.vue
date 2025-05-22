@@ -2,7 +2,7 @@
 import { loadFull } from "tsparticles";
 import { ref } from 'vue';
 import configs from "@tsparticles/configs";
-import options from "../config/particlesjs-config.json"
+import options from "../../config/particlesjs-config.json"
 const props = defineProps(['id'])
 
 // Create a reference to the particles container
@@ -48,7 +48,10 @@ const particlesInit = async (container: any) => {
 }
 
 .content {
+  color: white;
   position: absolute;
+  display: flex;
+  flex-direction: column;
   padding: 2rem;
   z-index: 2;
   width: 100%;
