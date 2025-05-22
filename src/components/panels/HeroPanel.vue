@@ -32,7 +32,7 @@ const showValuesClick = function (){
 
 <template>
 
-  <div class="panel">
+  <div class="panel" id="home">
     <div class="heroSection">
       <div class="heroText">
 
@@ -41,7 +41,7 @@ const showValuesClick = function (){
       </div>
       <ParticleCard id="1"/>
     </div>
-    <div class="infoWrap">
+    <div class="infoWrap" id="about">
 
       <InfoCard
           :title="data.about.title"

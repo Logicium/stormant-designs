@@ -1,6 +1,7 @@
 <script setup lang="ts">
 
 import data from "../data/data.ts";
+import Logo from "@/assets/Logo.vue";
 </script>
 
 <template>
@@ -8,15 +9,18 @@ import data from "../data/data.ts";
 
     <div class="footerTop">
       <div>
-        <div class="visit">Visit Us</div>
-        <div class="address">{{data.company.location}}</div>
+        <div class="visit">VISIT US</div>
+        <div class="small">{{data.company.location}}</div>
       </div>
-      <div class="appLetter">S</div>
+      <div class="logoWrap">
+        <div class="logo"><Logo/></div>
+        <div>STORMANT DESIGNS</div>
+      </div>
     </div>
 
     <div class="footer">
-      <div>2025</div>
-      <div>Beta all rights reserved</div>
+      <div class="small">{{data.footer.copyright}}</div>
+      <div class="small">Made by Apotome Labs</div>
     </div>
 
   </div>
@@ -45,10 +49,6 @@ import data from "../data/data.ts";
   margin-bottom: 0.5vw;
 }
 
-.visit{
-  font-size: 1.5vw;
-}
-
 .footer{
   margin-top: 0.5vw;
   display: flex;
@@ -58,10 +58,15 @@ import data from "../data/data.ts";
   border-top: 2px solid #f8f4f0;
 }
 
-.appLetter{
-  font-size: 2.5vw;
-  line-height: 2.5vw;
-  font-weight: 400;
+.logoWrap{
+  text-align: center;
+  transform: translateX(12px);
+}
+
+.logo{
+  height: 80px;
+  width: 180px;
+
 }
 
 

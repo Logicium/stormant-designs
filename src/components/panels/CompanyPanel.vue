@@ -5,7 +5,7 @@ import data from "../../data/data.ts";
 
 <template>
 
-  <div class="panelS">
+  <div class="panelS" id="company">
     <div class="panelInfo">
       <div class="med">MEET OUR COMPANY</div>
     </div>

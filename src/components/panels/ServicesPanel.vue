@@ -9,7 +9,7 @@ import ProductIcon from "@/components/icons/ProductIcon.vue";
 </script>
 
 <template>
-<div class="panelS">
+<div class="panelS" id="services">
   <div class="infoSection">
     <div class="med">{{data.hero.ctaText.toUpperCase()}}</div>
   </div>

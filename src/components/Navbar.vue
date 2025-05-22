@@ -1,6 +1,6 @@
 <script setup lang="ts">
 
-import {onMounted, ref} from "vue";
+import {nextTick, onMounted, ref} from "vue";
 import Logo from "@/assets/Logo.vue";
 const changeColor = ref(false);
 
@@ -14,18 +14,34 @@ onMounted(() => {
   window.addEventListener('scroll', handleScroll);
 });
 
+const scrollToRef = (id:string) => {
+  nextTick(() => {
+    console.log(window?.document?.getElementById(id));
+    const element = window?.document?.getElementById(id);
+    if (element) {
+      const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+      const offset = id === 'home' ? 0 : 100;
+      window.scrollTo({
+        top: elementPosition - offset,
+        behavior: 'smooth'
+      });
+    }
+  });
+};
+
+
 </script>
 
 <template>
   <nav :class="{colorChange: changeColor}">
     <div class="logoWrap"><div class="logo"><Logo/></div>STORMANT DESIGNS</div>
     <div class="links" :class="{changeBorder:changeColor}">
-      <div>HOME</div>
-      <div>ABOUT</div>
-      <div>SERVICES</div>
-      <div>COMPANY</div>
+      <div class="link" @click="scrollToRef('home')">HOME</div>
+      <div class="link" @click="scrollToRef('about')">ABOUT</div>
+      <div class="link" @click="scrollToRef('services')">SERVICES</div>
+      <div class="link" @click="scrollToRef('company')">COMPANY</div>
     </div>
-    <div class="button">CONTACT</div>
+    <div class="button"  @click="scrollToRef('contact')">CONTACT</div>
   </nav>
 </template>
 
@@ -94,8 +110,14 @@ nav{
   text-align: center;
 }
 
-.med{
+.link{
+  cursor: pointer;
+  transition: 0.5s;
+}
 
+.link:hover{
+  font-weight: 500;
+  transition: 0.5s;
 }
 
 </style>

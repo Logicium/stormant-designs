@@ -7,7 +7,7 @@ import LinkedinIcon from "@/components/icons/LinkedinIcon.vue";
 </script>
 
 <template>
-  <div class="panelS">
+  <div class="panelS" id="contact">
     <div class="med">GET IN TOUCH</div>
     <div class="contactGrid">
 
@@ -25,7 +25,7 @@ import LinkedinIcon from "@/components/icons/LinkedinIcon.vue";
           </div>
 
           <div>
-            <div>OFFICE</div>
+            <div>ADDRESS</div>
             <div class="small">
               {{data.company.location.split(',')[0]}}
             </div>
