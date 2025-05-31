@@ -36,7 +36,7 @@ const showValuesClick = function (){
     <div class="heroSection">
       <div class="heroText">
 
-        <div class="med half">{{data.company.subTagline}}</div>
+        <div class="med half tagline">{{data.company.subTagline}}</div>
         <div class="button cta" @click="scrollToRef('contact')">LET'S DISCUSS YOUR PROJECT</div>
       </div>
       <ParticleCard id="1"/>
@@ -136,6 +136,12 @@ const showValuesClick = function (){
   background-repeat: no-repeat;
   width: 200px;
   height: 200px;
+}
+
+@media (max-width: 480px) {
+  .tagline{
+    width: 70%;
+  }
 }
 
 </style>

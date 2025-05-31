@@ -26,21 +26,30 @@ const props = defineProps({
 
 <template>
   <div class="infoSection">
-    <div class="med half">{{title}}</div>
-    <transition name="grow">
-      <div class="desc half" v-if="toggle">{{content}}</div>
-    </transition>
-    <div class="button round" @click="showClick()">
-      <IconToggle :is-active="toggle">
-        <template #inactive>
-          <PlusIcon/>
-        </template>
-        <template #active>
-          <MinusIcon/>
-        </template>
-      </IconToggle>
+    <div class="infoRow">
+      <div class="med name">{{title}}</div>
+      <div class="descWrap half">
+        <transition name="grow">
+          <div class="desc" v-if="toggle">{{content}}</div>
+        </transition>
+        <div class="button round" @click="showClick()">
+          <IconToggle :is-active="toggle">
+            <template #inactive>
+              <PlusIcon/>
+            </template>
+            <template #active>
+              <MinusIcon/>
+            </template>
+          </IconToggle>
+        </div>
+      </div>
     </div>
 
+    <transition name="grow">
+      <div class="mobileDesc" v-if="toggle">
+        {{content}}
+      </div>
+    </transition>
 
   </div>
 </template>
@@ -49,7 +58,14 @@ const props = defineProps({
 
 .infoSection{
   display: flex;
+  flex-direction: column;
   border-bottom: 2px solid black;
+}
+
+.infoRow{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
 .med{
@@ -57,12 +73,33 @@ const props = defineProps({
   bottom: 0;
 }
 
-.desc{
-  margin-right: 2rem;
+.descWrap{
+  display: flex;
+  justify-content: end;
+}
+
+.mobileDesc,.desc{
+  margin-bottom: 1rem;
 }
 
 .button{
-  margin-left: auto;
+  margin-left: 2rem;
 }
+
+@media (max-width: 480px) {
+  .desc{
+    display: none;
+  }
+  .name{
+    width: 100%;
+  }
+}
+
+@media (min-width: 480px) {
+  .mobileDesc{
+    display: none;
+  }
+}
+
 
 </style>

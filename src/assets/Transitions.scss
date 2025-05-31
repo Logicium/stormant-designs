@@ -16,7 +16,7 @@
 
 .grow-enter-to,
 .grow-leave-from {
-  height: auto; // A value large enough to accommodate most content
+  height: auto;
   opacity: 1;
   transform: translateY(0);
   interpolate-size: allow-keywords;
