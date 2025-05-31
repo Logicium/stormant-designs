@@ -12,7 +12,7 @@ import data from "../../data/data.ts";
     <div class="imageGrid">
       <div class="card">
         <div>
-          <div class="med">032</div>
+          <div class="med">250+</div>
           <div>PROJECTS COMPLETED</div>
         </div>
         <div class="small">{{data.cta.projects}}</div>
@@ -39,7 +39,7 @@ import data from "../../data/data.ts";
       </div>
       <div class="card">
         <div>
-          <div class="med">50,000+</div>
+          <div class="med">500,000+</div>
           <div>SQUARE FEET OF BLUEPRINTS</div>
         </div>
         <div class="small">{{data.cta.scope}}</div>
