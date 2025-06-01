@@ -34,6 +34,11 @@ const toggleMenuClick = function (){
   }
 }
 
+const resetNav = function (){
+  toggleMenu.value = false;
+  changeColor.value = window.scrollY > 0;
+}
+
 
 </script>
 
@@ -49,11 +54,11 @@ const toggleMenuClick = function (){
 
     <transition name="fade">
       <div class="mobileLinks" v-if="toggleMenu">
-        <div class="link" @click="scrollToRef('home')">HOME</div>
-        <div class="link" @click="scrollToRef('about')">ABOUT</div>
-        <div class="link" @click="scrollToRef('services')">SERVICES</div>
-        <div class="link" @click="scrollToRef('company')">COMPANY</div>
-        <div class="link" @click="scrollToRef('contact')">CONTACT</div>
+        <div class="link" @click="scrollToRef('home');resetNav()">HOME</div>
+        <div class="link" @click="scrollToRef('about');resetNav()">ABOUT</div>
+        <div class="link" @click="scrollToRef('services');resetNav()">SERVICES</div>
+        <div class="link" @click="scrollToRef('company');resetNav()">COMPANY</div>
+        <div class="link" @click="scrollToRef('contact');resetNav()">CONTACT</div>
       </div>
     </transition>
 
