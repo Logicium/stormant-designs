@@ -1,6 +1,7 @@
 <script setup lang="ts">
 
 import data from "../../data/data.ts";
+import MobileImageGrid from "@/components/mobile/MobileImageGrid.vue";
 </script>
 
 <template>
@@ -45,6 +46,9 @@ import data from "../../data/data.ts";
         <div class="small">{{data.cta.scope}}</div>
       </div>
     </div>
+
+    <MobileImageGrid class="mobile"/>
+
   </div>
 
 </template>
@@ -133,5 +137,21 @@ import data from "../../data/data.ts";
 .img3{
   background-image: url("/public/emergent-campus.jpg");
 }
+
+@media (min-width: 480px) {
+  .mobile{
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .imageGrid{
+    display: none;
+  }
+  .panelS{
+    height: 100%;
+  }
+}
+
 
 </style>
