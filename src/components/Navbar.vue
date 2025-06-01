@@ -82,6 +82,7 @@ nav{
   align-items: center;
   z-index: 11;
   width: 100%;
+  max-width: 1280px;
   padding: 1rem 2rem;
   transition: 1s;
   height: 100px;
