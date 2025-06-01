@@ -20,7 +20,7 @@ import Logo from "@/assets/Logo.vue";
 
     <div class="footer">
       <div class="small">{{data.footer.copyright}}</div>
-      <div class="small">Made by Apotome Labs</div>
+      <div class="small right">Made by Apotome Labs</div>
     </div>
 
   </div>
@@ -53,6 +53,7 @@ import Logo from "@/assets/Logo.vue";
   margin-top: 0.5vw;
   display: flex;
   height: 6vh;
+  gap: 2rem;
   justify-content: space-between;
   align-items: center;
   border-top: 2px solid #f8f4f0;
@@ -66,7 +67,10 @@ import Logo from "@/assets/Logo.vue";
 .logo{
   height: 80px;
   width: 180px;
+}
 
+.right{
+  text-align: right;
 }
 
 

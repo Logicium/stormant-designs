@@ -138,6 +138,8 @@ input:focus, textarea:focus{
   color: black;
   height: 45px;
   width: 45px;
+  min-width: 45px;
+  min-height: 45px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -157,6 +159,22 @@ input:focus, textarea:focus{
   margin-top: auto;
   display: flex;
   justify-content: flex-end;
+}
+
+@media (max-width: 480px) {
+  .contactGrid{
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 30vh;
+  }
+
+  .contactInfo{
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+  }
+
+  .panelS{
+    height: 100%;
+  }
 }
 
 </style>
