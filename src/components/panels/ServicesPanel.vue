@@ -6,6 +6,7 @@ import StructureIcon from "@/components/icons/StructureIcon.vue";
 import ServiceCard from "@/components/cards/ServiceCard.vue";
 import SustainableIcon from "@/components/icons/SustainableIcon.vue";
 import ProductIcon from "@/components/icons/ProductIcon.vue";
+import MobileServicesGrid from "@/components/mobile/MobileServicesGrid.vue";
 </script>
 
 <template>
@@ -47,6 +48,9 @@ import ProductIcon from "@/components/icons/ProductIcon.vue";
       </ServiceCard>
     </div>
   </div>
+
+  <MobileServicesGrid class="mobile"/>
+
 </div>
 </template>
 
@@ -118,6 +122,22 @@ import ProductIcon from "@/components/icons/ProductIcon.vue";
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+@media (max-width: 480px) {
+  .servicesGrid{
+    display: none;
+  }
+
+  .panelS{
+    height: 100%;
+  }
+}
+
+@media (min-width: 480px) {
+  .mobile{
+    display: none;
+  }
 }
 
 </style>
