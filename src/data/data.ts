@@ -24,7 +24,7 @@ export const siteData = {
     subTagline: "Expert engineering design to bring your vision to reality",
     foundedYear: 2024,
     location: "612 Park Avenue, Trinidad CO 81082",
-    email: "zach@stormantdesigns.com",
+    email: "info@stormantdesigns.com",
     phone: "+1 (303) 555-1234"
   },
   
