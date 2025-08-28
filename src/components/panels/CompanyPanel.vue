@@ -34,8 +34,8 @@ import MobileImageGrid from "@/components/mobile/MobileImageGrid.vue";
       </div>
       <div class="image img3">
         <div class=" info">
-          <div class="small">Office at</div>
-          <div>EMERGENT CAMPUS</div>
+          <div class="small">We create</div>
+          <div>3D RENDERS</div>
         </div>
       </div>
       <div class="card">
@@ -123,11 +123,11 @@ import MobileImageGrid from "@/components/mobile/MobileImageGrid.vue";
 }
 
 .img1{
-  background-image: url("/public/zach.webp");
+  background-image: url("/public/Z Headshot.jpg");
   grid-row: span 2;
   grid-column: 2;
   justify-content: end;
-  background-position: 0% 50%;
+  background-position: 50% 40%;
 }
 
 .img2{
@@ -135,7 +135,7 @@ import MobileImageGrid from "@/components/mobile/MobileImageGrid.vue";
 }
 
 .img3{
-  background-image: url("/public/emergent-campus.jpg");
+  background-image: url("/public/AI Mockup - Mountain Home.jpg");
 }
 
 @media (min-width: 480px) {
